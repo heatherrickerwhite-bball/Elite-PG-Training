@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content=No"width=device-width, initial-scale=1.0" />
   <title>Elite PG Training</title>
 
   <link rel="manifest" href="manifest.json">
@@ -19,7 +19,17 @@
 </header>
 
 <main>
+<nav class="bottom-nav">
+    <button onclick="showPage('home')">🏠 Home</button>
+    <button onclick="showPage('training')">🏀 Training</button>
+    <button onclick="showPage('progress')">📈 Progress</button>
+    <button onclick="showPage('nutrition')">🍎 Nutrition</button>
+    <button onclick="showPage('recruiting')">🏆 Recruiting</button>
+</nav>
 
+<div id="app-content">
+    <!-- App pages will load here -->
+</div>
 <section class="card">
 <h2>Today's Workout</h2>
 
