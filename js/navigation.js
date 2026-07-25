@@ -1,6 +1,42 @@
 const pages = {
 
 home: `
+
+<div class="card profile">
+
+<img src="assets/jameson.jpg" class="profile-photo">
+
+<h2>Jameson White</h2>
+
+<p>Elite Point Guard Development</p>
+
+</div>
+
+<div class="card">
+
+<h2>Today's Goal</h2>
+
+<p>Complete every workout section.</p>
+
+<button onclick="showPage('training')">
+Start Training
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>Today's Progress</h2>
+
+<p>🔥 Workout Streak: 0</p>
+
+<p>🏀 Shots Made: 0</p>
+
+<p>💧 Water: 0 / 100 oz</p>
+
+</div>
+
+`
 <div class="card">
 <h2>🏀 Elite PG Training</h2>
 
