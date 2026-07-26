@@ -13,12 +13,12 @@ body {
     line-height: 1.6;
 }
 
-.header {
-    background: #6B1E2E;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+.header{
+    background:#7A0019;
+    color:white;
+    text-align:center;
+    padding:28px 20px;
+    border-bottom:4px solid #550012;
 }
 
 .header h1 {
