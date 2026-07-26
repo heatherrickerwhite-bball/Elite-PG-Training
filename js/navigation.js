@@ -1,99 +1,61 @@
-const pages = {
+// Elite PG Training Navigation
+// Version 1.1
 
-home: `
-<div class="card">
-
-<h2>Welcome Jameson</h2>
-
-<p>Ready to become an Elite Point Guard?</p>
-
-<button onclick="showPage('training')">
-
-Start Today's Workout
-
-</button>
-
-</div>
-`,
-
-training: `
-<div class="card">
-
-<h2>Today's Workout</h2>
-
-<label><input type="checkbox"> Dynamic Warm-Up</label><br><br>
-
-<label><input type="checkbox"> Ball Handling</label><br><br>
-
-<label><input type="checkbox"> Shooting</label><br><br>
-
-<label><input type="checkbox"> Finishing</label><br><br>
-
-<label><input type="checkbox"> Strength</label><br><br>
-
-<label><input type="checkbox"> Conditioning</label>
-
-</div>
-`,
-
-progress: `
-<div class="card">
-
-<h2>Progress</h2>
-
-<p>Workout Streak: 0</p>
-
-<p>FG%: --</p>
-
-<p>3PT%: --</p>
-
-<p>Vertical Jump: --</p>
-
-</div>
-`,
-
-nutrition: `
-<div class="card">
-
-<h2>Nutrition</h2>
-
-<p>💧 Water Goal</p>
-
-<p>🥣 Breakfast</p>
-
-<p>🥪 Lunch</p>
-
-<p>🍗 Dinner</p>
-
-</div>
-`,
-
-recruiting: `
-<div class="card">
-
-<h2>Recruiting</h2>
-
-<ul>
-
-<li>Coach Contacts</li>
-
-<li>Email Tracker</li>
-
-<li>Camp Calendar</li>
-
-<li>Highlight Videos</li>
-
-</ul>
-
-</div>
-`
-
+const pageFiles = {
+    dashboard: "pages/dashboard.html",
+    training: "pages/training.html",
+    progress: "pages/progress.html",
+    nutrition: "pages/nutrition.html"
 };
 
-function showPage(page){
+async function showPage(page) {
+    const app = document.getElementById("app");
 
-document.getElementById("app").innerHTML = pages[page];
+    if (!pageFiles[page]) {
+        app.innerHTML = `
+            <div class="card">
+                <h2>Page Not Found</h2>
+                <p>The page "${page}" doesn't exist.</p>
+            </div>
+        `;
+        return;
+    }
 
+    try {
+        const response = await fetch(pageFiles[page]);
+
+        if (!response.ok) {
+            throw new Error("Unable to load page.");
+        }
+
+        const html = await response.text();
+        app.innerHTML = html;
+
+        // Highlight active navigation button
+        document.querySelectorAll(".bottom-nav button").forEach(button => {
+            button.classList.remove("active");
+        });
+
+        const activeButton = document.querySelector(
+            `.bottom-nav button[data-page="${page}"]`
+        );
+
+        if (activeButton) {
+            activeButton.classList.add("active");
+        }
+
+    } catch (error) {
+        app.innerHTML = `
+            <div class="card">
+                <h2>Error</h2>
+                <p>Could not load ${page}.</p>
+            </div>
+        `;
+        console.error(error);
+    }
 }
 
-showPage("home");
+// Load the dashboard when the app starts
+document.addEventListener("DOMContentLoaded", () => {
+    showPage("dashboard");
+});
