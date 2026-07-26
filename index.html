@@ -6,34 +6,48 @@
 
     <title>Elite PG Training</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="theme-color" content="#7A0019">
+
     <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-    <div id="app"></div>
+    <div id="app">
+        <!-- Pages load here -->
+    </div>
 
     <nav class="bottom-nav">
-        <button onclick="showPage('dashboard')">
+
+        <button
+            data-page="dashboard"
+            onclick="showPage('dashboard')">
             🏠<br>
             Today
         </button>
 
-        <button onclick="showPage('training')">
+        <button
+            data-page="training"
+            onclick="showPage('training')">
             🏀<br>
             Training
         </button>
 
-        <button onclick="showPage('progress')">
+        <button
+            data-page="progress"
+            onclick="showPage('progress')">
             📊<br>
             Progress
         </button>
 
-        <button onclick="showPage('nutrition')">
+        <button
+            data-page="nutrition"
+            onclick="showPage('nutrition')">
             🍎<br>
             Nutrition
         </button>
+
     </nav>
 
     <script src="js/navigation.js"></script>
