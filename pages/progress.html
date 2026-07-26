@@ -38,12 +38,19 @@ h1{
 
 .bar{
     height:100%;
+    width:0%;
     background:#28a745;
+    transition:width .4s ease;
 }
 
 .stat{
     font-size:18px;
     margin:10px 0;
+}
+
+.value{
+    font-weight:bold;
+    color:#1b5e20;
 }
 </style>
 
@@ -54,13 +61,14 @@ h1{
 <h1>📈 Progress Dashboard</h1>
 
 <div class="card">
+
 <h2>🏀 Daily Workout</h2>
 
 <div class="progress">
-<div class="bar" style="width:0%;"></div>
+<div class="bar" id="workoutBar"></div>
 </div>
 
-<p>Completed: 0%</p>
+<p>Completed: <span id="workoutPercent">0%</span></p>
 
 </div>
 
@@ -68,15 +76,15 @@ h1{
 
 <h2>🎯 Shooting</h2>
 
-<div class="stat">Makes: 0</div>
+<div class="stat">Makes: <span id="makes" class="value">0</span></div>
 
-<div class="stat">Attempts: 0</div>
+<div class="stat">Attempts: <span id="attempts" class="value">0</span></div>
 
-<div class="stat">Field Goal %: 0%</div>
+<div class="stat">Field Goal %: <span id="fg" class="value">0%</span></div>
 
-<div class="stat">3PT %: 0%</div>
+<div class="stat">3PT %: <span id="three" class="value">0%</span></div>
 
-<div class="stat">Free Throws: 0%</div>
+<div class="stat">Free Throws: <span id="ft" class="value">0%</span></div>
 
 </div>
 
@@ -84,11 +92,11 @@ h1{
 
 <h2>💪 Strength</h2>
 
-<div class="stat">Push-ups: 0</div>
+<div class="stat">Push-ups: <span id="pushups" class="value">0</span></div>
 
-<div class="stat">Squats: 0</div>
+<div class="stat">Squats: <span id="squats" class="value">0</span></div>
 
-<div class="stat">Vertical Jump: --</div>
+<div class="stat">Vertical Jump: <span id="vertical" class="value">--</span></div>
 
 </div>
 
@@ -96,9 +104,9 @@ h1{
 
 <h2>🏃 Speed</h2>
 
-<div class="stat">Sprint Time: --</div>
+<div class="stat">Sprint Time: <span id="sprint" class="value">--</span></div>
 
-<div class="stat">Lane Agility: --</div>
+<div class="stat">Lane Agility: <span id="lane" class="value">--</span></div>
 
 </div>
 
@@ -106,11 +114,11 @@ h1{
 
 <h2>🍎 Nutrition</h2>
 
-<div class="stat">Meals Completed: 0 / 7</div>
+<div class="stat">Meals Completed: <span id="meals" class="value">0 / 7</span></div>
 
-<div class="stat">Protein: 0 g</div>
+<div class="stat">Protein: <span id="protein" class="value">0 g</span></div>
 
-<div class="stat">Water: 0 / 8 Bottles</div>
+<div class="stat">Water: <span id="water" class="value">0 / 8 Bottles</span></div>
 
 </div>
 
@@ -118,9 +126,9 @@ h1{
 
 <h2>😴 Recovery</h2>
 
-<div class="stat">Sleep: 0 Hours</div>
+<div class="stat">Sleep: <span id="sleep" class="value">0 Hours</span></div>
 
-<div class="stat">Stretching: ❌</div>
+<div class="stat">Stretching: <span id="stretch" class="value">❌</span></div>
 
 </div>
 
@@ -128,13 +136,13 @@ h1{
 
 <h2>🎓 Recruiting</h2>
 
-<div class="stat">Schools Contacted: 0</div>
+<div class="stat">Schools Contacted: <span id="schools" class="value">0</span></div>
 
-<div class="stat">Coach Replies: 0</div>
+<div class="stat">Coach Replies: <span id="replies" class="value">0</span></div>
 
-<div class="stat">Campus Visits: 0</div>
+<div class="stat">Campus Visits: <span id="visits" class="value">0</span></div>
 
-<div class="stat">Offers: 0</div>
+<div class="stat">Offers: <span id="offers" class="value">0</span></div>
 
 </div>
 
@@ -142,9 +150,12 @@ h1{
 
 <h2>🔥 Daily Streak</h2>
 
-<h1 style="text-align:center;">0 Days</h1>
+<h1 style="text-align:center;" id="streak">0 Days</h1>
 
 </div>
 
+<script src="../js/progress.js"></script>
+
 </body>
 </html>
+<script src="../js/progress.js"></script>
