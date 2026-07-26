@@ -1,44 +1,68 @@
-const workouts = {
+// workout.js
 
-Monday:{
+document.addEventListener("DOMContentLoaded", () => {
 
-coach:
-"Today's workout focuses on ball control, attacking the rim, and building explosive lower-body strength.",
+    const checkboxes = document.querySelectorAll(".workout-card input[type='checkbox']");
+    const progressBar = document.getElementById("workoutProgress");
+    const progressText = document.getElementById("progressText");
 
-warmup:[
-"World's Greatest Stretch",
-"Leg Swings",
-"Glute Bridges",
-"Walking Lunges",
-"Bodyweight Squats"
-],
+    function updateWorkout() {
 
-skills:[
-"Stationary Ball Handling",
-"Two Ball Series",
-"Finishing Through Contact",
-"Pick & Roll Reads"
-],
+        let completed = 0;
 
-weights:[
-"Back Squats",
-"Romanian Deadlift",
-"Walking Lunges",
-"Core Circuit"
-],
+        checkboxes.forEach((box, index) => {
 
-athletic:[
-"10 Yard Starts",
-"Lateral Shuffle",
-"Reaction Drill"
-],
+            if (localStorage.getItem("workoutBox" + index) === "true") {
+                box.checked = true;
+            }
 
-recovery:[
-"Stretch",
-"Hydrate",
-"Protein Recovery"
-]
+            if (box.checked) {
+                completed++;
+            }
 
-}
+        });
 
-};
+        const percent = checkboxes.length
+            ? Math.round((completed / checkboxes.length) * 100)
+            : 0;
+
+        if (progressBar) {
+            progressBar.value = percent;
+        }
+
+        if (progressText) {
+            progressText.textContent = percent + "% Complete";
+        }
+
+        localStorage.setItem("workoutPercent", percent);
+
+        // Trigger streak once when workout reaches 100%
+        if (percent === 100 && localStorage.getItem("workoutCompletedToday") !== new Date().toDateString()) {
+
+            if (typeof completeWorkout === "function") {
+                completeWorkout();
+            }
+
+            localStorage.setItem(
+                "workoutCompletedToday",
+                new Date().toDateString()
+            );
+        }
+
+    }
+
+    checkboxes.forEach((box, index) => {
+
+        box.addEventListener("change", () => {
+
+            localStorage.setItem("workoutBox" + index, box.checked);
+
+            updateWorkout();
+
+        });
+
+    });
+
+    updateWorkout();
+
+});
