@@ -1,63 +1,254 @@
-<div class="nutrition-page">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite PG Nutrition</title>
 
-    <h1>🍎 Daily Nutrition</h1>
+<style>
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f4f4;
+    margin:0;
+    padding:20px;
+}
 
-    <div class="card">
-        <h2>🍳 Breakfast</h2>
-        <ul class="schedule">
-            <li>☐ Eggs</li>
-            <li>☐ Oatmeal</li>
-            <li>☐ Fruit</li>
-            <li>☐ Water</li>
-        </ul>
-    </div>
+h1{
+    text-align:center;
+    color:#1b5e20;
+}
 
-    <div class="card">
-        <h2>🍌 Morning Snack</h2>
-        <ul class="schedule">
-            <li>☐ Greek Yogurt</li>
-            <li>☐ Banana</li>
-        </ul>
-    </div>
+.meal-card{
+    background:#fff;
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,.12);
+}
 
-    <div class="card">
-        <h2>🥪 Lunch</h2>
-        <ul class="schedule">
-            <li>☐ Lean Protein</li>
-            <li>☐ Rice or Potatoes</li>
-            <li>☐ Vegetables</li>
-            <li>☐ Water</li>
-        </ul>
-    </div>
+.meal-card h2{
+    margin-top:0;
+    color:#1b5e20;
+}
 
-    <div class="card">
-        <h2>🏀 Pre-Practice Snack</h2>
-        <ul class="schedule">
-            <li>☐ Peanut Butter Sandwich</li>
-            <li>☐ Banana</li>
-        </ul>
-    </div>
+.meal-card h3{
+    margin-bottom:8px;
+    color:#444;
+}
 
-    <div class="card">
-        <h2>💪 Post-Workout Recovery</h2>
-        <ul class="schedule">
-            <li>☐ Protein Shake</li>
-            <li>☐ Chocolate Milk or Fruit</li>
-        </ul>
-    </div>
+label{
+    display:block;
+    padding:6px 0;
+    font-size:16px;
+}
 
-    <div class="card">
-        <h2>🍽 Dinner</h2>
-        <ul class="schedule">
-            <li>☐ Lean Protein</li>
-            <li>☐ Vegetables</li>
-            <li>☐ Rice or Pasta</li>
-        </ul>
-    </div>
+input[type="checkbox"]{
+    margin-right:10px;
+}
+</style>
 
-    <div class="card">
-        <h2>💧 Daily Hydration</h2>
-        <p>Goal: <strong>100 oz+</strong> of water</p>
-    </div>
+</head>
 
-</div>
+<body>
+
+<h1>🥗 Daily Nutrition</h1>
+
+<!-- Breakfast -->
+
+<section class="meal-card">
+
+<h2>🍳 Breakfast</h2>
+
+<h3>Main</h3>
+
+<label><input type="checkbox">Cereal</label>
+<label><input type="checkbox">Waffles</label>
+<label><input type="checkbox">Bacon</label>
+<label><input type="checkbox">Sausage</label>
+<label><input type="checkbox">Protein Yogurt (Optional)</label>
+
+<h3>Fruit</h3>
+
+<label><input type="checkbox">Strawberries</label>
+<label><input type="checkbox">Apple</label>
+<label><input type="checkbox">Pineapple</label>
+<label><input type="checkbox">Watermelon</label>
+
+</section>
+
+<!-- Morning Snack -->
+
+<section class="meal-card">
+
+<h2>🍎 Morning Snack</h2>
+
+<label><input type="checkbox">Goldfish</label>
+<label><input type="checkbox">Pretzels</label>
+<label><input type="checkbox">Beef Jerky</label>
+<label><input type="checkbox">Cheese Stick</label>
+<label><input type="checkbox">Grapes</label>
+<label><input type="checkbox">Strawberries</label>
+<label><input type="checkbox">Apple</label>
+<label><input type="checkbox">Pineapple</label>
+<label><input type="checkbox">Watermelon</label>
+
+</section>
+
+<!-- Lunch -->
+
+<section class="meal-card">
+
+<h2>🥪 School Lunch</h2>
+
+<h3>Main</h3>
+
+<label><input type="checkbox">Lunchable</label>
+<label><input type="checkbox">Cheese & Crackers</label>
+<label><input type="checkbox">Pepperoni</label>
+<label><input type="checkbox">Crackers</label>
+
+<h3>Sides</h3>
+
+<label><input type="checkbox">Goldfish</label>
+<label><input type="checkbox">Pretzels</label>
+
+<h3>Fruit</h3>
+
+<label><input type="checkbox">Grapes</label>
+<label><input type="checkbox">Strawberries</label>
+<label><input type="checkbox">Apple</label>
+<label><input type="checkbox">Pineapple</label>
+<label><input type="checkbox">Watermelon</label>
+
+</section>
+
+<!-- Pre Practice -->
+
+<section class="meal-card">
+
+<h2>🏀 Pre-Practice Snack</h2>
+
+<label><input type="checkbox">Pretzels</label>
+<label><input type="checkbox">Goldfish</label>
+<label><input type="checkbox">Beef Jerky</label>
+<label><input type="checkbox">Cheese Stick</label>
+<label><input type="checkbox">Grapes</label>
+<label><input type="checkbox">Apple</label>
+
+</section>
+
+<!-- Post Practice -->
+
+<section class="meal-card">
+
+<h2>💪 Post-Practice Recovery</h2>
+
+<label><input type="checkbox">Water</label>
+<label><input type="checkbox">Beef Jerky</label>
+<label><input type="checkbox">Cheese Stick</label>
+<label><input type="checkbox">Pretzels</label>
+<label><input type="checkbox">Goldfish</label>
+<label><input type="checkbox">Grapes</label>
+<label><input type="checkbox">Strawberries</label>
+<label><input type="checkbox">Apple</label>
+<label><input type="checkbox">Pineapple</label>
+<label><input type="checkbox">Watermelon</label>
+<label><input type="checkbox">Protein Yogurt (Optional)</label>
+
+</section>
+
+<!-- Dinner -->
+
+<section class="meal-card">
+
+<h2>🍽 Dinner</h2>
+
+<h3>Protein</h3>
+
+<label><input type="checkbox">Chicken Tenders</label>
+<label><input type="checkbox">Cheeseburger</label>
+<label><input type="checkbox">Steak</label>
+<label><input type="checkbox">Pasta with Meat Sauce</label>
+
+<h3>Sides</h3>
+
+<label><input type="checkbox">Mashed Potatoes</label>
+<label><input type="checkbox">French Fries</label>
+
+<h3>Fruit</h3>
+
+<label><input type="checkbox">Grapes</label>
+<label><input type="checkbox">Strawberries</label>
+<label><input type="checkbox">Apple</label>
+<label><input type="checkbox">Pineapple</label>
+<label><input type="checkbox">Watermelon</label>
+
+</section>
+
+<!-- Evening Snack -->
+
+<section class="meal-card">
+
+<h2>🌙 Evening Snack</h2>
+
+<label><input type="checkbox">Protein Bar</label>
+<label><input type="checkbox">Cheese Stick</label>
+<label><input type="checkbox">Grapes</label>
+<label><input type="checkbox">Strawberries</label>
+<label><input type="checkbox">Apple</label>
+<label><input type="checkbox">Pineapple</label>
+<label><input type="checkbox">Watermelon</label>
+
+</section>
+
+<!-- After Game -->
+
+<section class="meal-card">
+
+<h2>🏆 After Game Recovery</h2>
+
+<h3>Drink</h3>
+
+<label><input type="checkbox">Water</label>
+
+<h3>Chick-fil-A</h3>
+
+<label><input type="checkbox">Nuggets</label>
+<label><input type="checkbox">Waffle Fries</label>
+
+<h3>Zaxby's</h3>
+
+<label><input type="checkbox">Chicken Fingerz</label>
+<label><input type="checkbox">Crinkle Fries</label>
+<label><input type="checkbox">Texas Toast</label>
+
+<h3>Pal's</h3>
+
+<label><input type="checkbox">Cheeseburger</label>
+<label><input type="checkbox">Frenchie Fries</label>
+
+<h3>Burger King</h3>
+
+<label><input type="checkbox">Cheeseburger</label>
+<label><input type="checkbox">Chicken Fries</label>
+<label><input type="checkbox">French Fries</label>
+
+<h3>Cook Out</h3>
+
+<label><input type="checkbox">Chicken Strips</label>
+<label><input type="checkbox">Cheeseburger</label>
+<label><input type="checkbox">French Fries</label>
+
+<h3>Add Fruit When Home</h3>
+
+<label><input type="checkbox">Grapes</label>
+<label><input type="checkbox">Strawberries</label>
+<label><input type="checkbox">Apple</label>
+<label><input type="checkbox">Pineapple</label>
+<label><input type="checkbox">Watermelon</label>
+<label><input type="checkbox">Protein Yogurt (Optional)</label>
+
+</section>
+
+</body>
+</html>
