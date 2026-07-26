@@ -227,3 +227,58 @@ transform:translateY(0);
 }
 
 }
+.today-screen{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.hero-photo img{
+    width:100%;
+    border-radius:20px;
+    object-fit:cover;
+}
+
+.performance-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+    margin:25px 0;
+}
+
+.stat-card{
+    background:#1d1d1d;
+    border-radius:18px;
+    padding:20px;
+    text-align:center;
+    border:2px solid #800000;
+}
+
+.stat-card h2{
+    margin-bottom:12px;
+}
+
+.stat-card span{
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.coach-card{
+    background:#242424;
+    padding:24px;
+    border-radius:18px;
+    margin-bottom:25px;
+    border-left:6px solid maroon;
+}
+
+.start-btn{
+    width:100%;
+    padding:18px;
+    font-size:22px;
+    border:none;
+    border-radius:18px;
+    cursor:pointer;
+    background:maroon;
+    color:white;
+    font-weight:bold;
+}
