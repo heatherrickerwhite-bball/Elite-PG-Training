@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings</title>
 
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    margin:0;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.card{
+    background:#fff;
+    border-radius:16px;
+    padding:18px;
+    margin-bottom:18px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+label{
+    display:block;
+    margin:12px 0;
+    font-size:18px;
+}
+
+input, select{
+    width:100%;
+    padding:10px;
+    margin-top:6px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    margin-top:12px;
+    border:none;
+    border-radius:10px;
+    background:#28a745;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#218838;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>⚙️ Settings</h1>
+
+<div class="card">
+
+<h2>👤 Player Information</h2>
+
+<label>Name
+<input type="text" id="playerName" placeholder="Jameson White">
+</label>
+
+<label>Position
+<input type="text" id="position" placeholder="Point Guard">
+</label>
+
+<label>Height
+<input type="text" id="height" placeholder="5'9&quot;">
+</label>
+
+<label>Weight
+<input type="text" id="weight" placeholder="150 lbs">
+</label>
+
+<label>Graduation Class
+<input type="text" id="gradYear" placeholder="2028">
+</label>
+
+</div>
+
+<div class="card">
+
+<h2>🎯 Goals</h2>
+
+<label>Daily Workout Time
+<input type="number" id="workoutGoal" placeholder="120">
+</label>
+
+<label>Daily Water Goal
+<input type="number" id="waterGoal" placeholder="8">
+</label>
+
+<label>Daily Protein Goal (g)
+<input type="number" id="proteinGoal" placeholder="140">
+</label>
+
+</div>
+
+<div class="card">
+
+<h2>🔔 Notifications</h2>
+
+<label><input type="checkbox" id="practiceReminder"> Practice Reminder</label>
+
+<label><input type="checkbox" id="nutritionReminder"> Nutrition Reminder</label>
+
+<label><input type="checkbox" id="hydrationReminder"> Hydration Reminder</label>
+
+<label><input type="checkbox" id="recruitingReminder"> Recruiting Reminder</label>
+
+</div>
+
+<div class="card">
+
+<h2>💾 App Data</h2>
+
+<button id="saveSettings">Save Settings</button>
+
+<button id="resetProgress">Reset Progress</button>
+
+</div>
+
+<script src="../js/settings.js"></script>
+
+</body>
+</html>
