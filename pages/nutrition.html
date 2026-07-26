@@ -1,55 +1,169 @@
-/* Your existing CSS */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Nutrition</title>
 
-/* lots of styles above... */
+<link rel="stylesheet" href="../css/style.css">
 
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    margin:0;
+    padding:20px;
+}
 
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
 
-/* ===========================
-   Progress Bar
-=========================== */
+.card{
+    background:white;
+    border-radius:18px;
+    padding:18px;
+    margin-bottom:18px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
 
-.progress-container{
+.card h2{
+    margin-top:0;
+    color:#2c3e50;
+}
+
+label{
+    display:block;
+    padding:6px 0;
+    font-size:17px;
+}
+
+.progress{
     width:100%;
-    height:18px;
+    height:22px;
     background:#ddd;
     border-radius:20px;
     overflow:hidden;
-    margin:15px 0;
 }
 
 .progress-bar{
     width:0%;
     height:100%;
-    background:#1fb141;
-    transition:.3s;
+    background:#2ecc71;
 }
+</style>
 
-#progressText{
-    text-align:center;
-    font-weight:bold;
-    margin-bottom:20px;
-}
+</head>
 
+<body>
 
-/* ===========================
-   Workout Cards
-=========================== */
+<h1>🥗 Daily Nutrition</h1>
 
-details{
-    margin-bottom:15px;
-    background:white;
-    border-radius:12px;
-    padding:10px;
-}
+<div class="card">
+<h2>🍳 Breakfast</h2>
 
-summary{
-    cursor:pointer;
-    font-weight:bold;
-    font-size:18px;
-}
+<label><input type="checkbox"> Eggs</label>
+<label><input type="checkbox"> Oatmeal</label>
+<label><input type="checkbox"> Greek Yogurt</label>
+<label><input type="checkbox"> Banana</label>
+<label><input type="checkbox"> Strawberries</label>
+<label><input type="checkbox"> Water</label>
 
-.tip{
-    margin-top:10px;
-    color:#666;
-    font-style:italic;
-}
+</div>
+
+<div class="card">
+
+<h2>🍎 Morning Snack</h2>
+
+<label><input type="checkbox"> Beef Jerky</label>
+<label><input type="checkbox"> Cheese Stick</label>
+<label><input type="checkbox"> Apple</label>
+<label><input type="checkbox"> Goldfish</label>
+<label><input type="checkbox"> Water</label>
+
+</div>
+
+<div class="card">
+
+<h2>🥪 Lunch</h2>
+
+<label><input type="checkbox"> Grilled Chicken</label>
+<label><input type="checkbox"> Rice</label>
+<label><input type="checkbox"> Fruit</label>
+<label><input type="checkbox"> Yogurt</label>
+<label><input type="checkbox"> Water</label>
+
+</div>
+
+<div class="card">
+
+<h2>⚡ Pre-Practice Snack</h2>
+
+<label><input type="checkbox"> Banana</label>
+<label><input type="checkbox"> Pretzels</label>
+<label><input type="checkbox"> Gatorade</label>
+
+</div>
+
+<div class="card">
+
+<h2>💪 Post-Practice Recovery</h2>
+
+<label><input type="checkbox"> Protein Shake</label>
+<label><input type="checkbox"> Chicken</label>
+<label><input type="checkbox"> Rice</label>
+<label><input type="checkbox"> Water</label>
+
+</div>
+
+<div class="card">
+
+<h2>🍽 Dinner</h2>
+
+<label><input type="checkbox"> Lean Protein</label>
+<label><input type="checkbox"> Potato or Rice</label>
+<label><input type="checkbox"> Fruit</label>
+<label><input type="checkbox"> Water</label>
+
+</div>
+
+<div class="card">
+
+<h2>🌙 Evening Snack</h2>
+
+<label><input type="checkbox"> Greek Yogurt</label>
+<label><input type="checkbox"> Cheese Stick</label>
+<label><input type="checkbox"> Fruit</label>
+
+</div>
+
+<div class="card">
+
+<h2>💧 Daily Water Goal</h2>
+
+<label><input type="checkbox"> Bottle 1</label>
+<label><input type="checkbox"> Bottle 2</label>
+<label><input type="checkbox"> Bottle 3</label>
+<label><input type="checkbox"> Bottle 4</label>
+<label><input type="checkbox"> Bottle 5</label>
+<label><input type="checkbox"> Bottle 6</label>
+<label><input type="checkbox"> Bottle 7</label>
+<label><input type="checkbox"> Bottle 8</label>
+
+</div>
+
+<div class="card">
+
+<h2>🥩 Daily Protein Goal</h2>
+
+<p><strong>Goal: 130-150g Protein</strong></p>
+
+<div class="progress">
+<div class="progress-bar"></div>
+</div>
+
+</div>
+
+</body>
+</html>
