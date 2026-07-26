@@ -1,19 +1,49 @@
-const today = new Date().toDateString();
+// streak.js
 
-const lastWorkout = Storage.load("lastWorkout");
+document.addEventListener("DOMContentLoaded", () => {
 
-let streak = Storage.load("streak") || 0;
+    const streakElement = document.getElementById("streak");
 
-function completeWorkout(){
+    if (!streakElement) return;
 
-if(lastWorkout !== today){
+    let streak = Number(localStorage.getItem("dailyStreak")) || 0;
+    let lastCompleted = localStorage.getItem("lastCompletedDate");
 
-streak++;
+    const today = new Date().toDateString();
 
-Storage.save("streak",streak);
+    // Display current streak
+    streakElement.textContent = `${streak} Day${streak === 1 ? "" : "s"}`;
 
-Storage.save("lastWorkout",today);
+    // Function to call when a workout is completed
+    window.completeWorkout = function () {
 
-}
+        if (lastCompleted === today) return;
 
-}
+        const yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1);
+
+        if (lastCompleted === yesterday.toDateString()) {
+            streak++;
+        } else {
+            streak = 1;
+        }
+
+        localStorage.setItem("dailyStreak", streak);
+        localStorage.setItem("lastCompletedDate", today);
+
+        streakElement.textContent = `${streak} Day${streak === 1 ? "" : "s"}`;
+
+        if (streak === 7) {
+            alert("🔥 7-Day Streak! Great work!");
+        }
+
+        if (streak === 30) {
+            alert("🏆 30-Day Streak! Incredible consistency!");
+        }
+
+        if (streak === 100) {
+            alert("💯 100-Day Streak! Elite dedication!");
+        }
+    };
+
+});
