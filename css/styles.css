@@ -38,11 +38,12 @@ main {
 }
 
 .card {
-    background: white;
-    border-radius: 15px;
+    background: #1b1b1b;
+    border: 1px solid #7A0019;
+    border-radius: 18px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,.35);
 }
 
 .card h2 {
