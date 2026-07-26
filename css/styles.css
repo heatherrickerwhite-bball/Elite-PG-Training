@@ -227,7 +227,6 @@ transform:translateY(0);
 
 }
 
-}
 .today-screen{
     max-width:900px;
     margin:auto;
@@ -236,136 +235,8 @@ transform:translateY(0);
 
 .hero-photo img{
     width:100%;
-    border-radius:20px;
-    object-fit:cover;
-}
-
-.performance-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
-    margin:25px 0;
-}
-
-.stat-card{
-    background:#1d1d1d;
-    border-radius:18px;
-    padding:20px;
-    text-align:center;
-    border:2px solid #800000;
-}
-
-.stat-card h2{
-    margin-bottom:12px;
-}
-
-.stat-card span{
-    font-size:2rem;
-    font-weight:bold;
-}
-
-.coach-card{
-    background:#242424;
-    padding:24px;
-    border-radius:18px;
-    margin-bottom:25px;
-    border-left:6px solid maroon;
-}
-
-.start-btn{
-    width:100%;
-    padding:18px;
-    font-size:22px;
-    border:none;
-    border-radius:18px;
-    cursor:pointer;
-    background:maroon;
-    color:white;
-    font-weight:bold;
-}
-.training-page{
-
-    max-width:900px;
-
-    margin:auto;
-
-    padding:20px;
-
-}
-
-.workout-card{
-
-    background:#1d1d1d;
-
-    padding:22px;
-
-    border-radius:18px;
-
-    margin-bottom:22px;
-
-    border-left:6px solid maroon;
-
-}
-
-.workout-card h2{
-
-    margin-bottom:15px;
-
-}
-
-.workout-card label{
-
     display:block;
-
-    margin:10px 0;
-
-    font-size:18px;
-
-}
-
-.workout-card input{
-
-    width:100%;
-
-    padding:12px;
-
-    margin:8px 0;
-
-    border-radius:10px;
-
-}
-
-.workout-card button{
-
-    width:100%;
-
-    margin-top:12px;
-
-    padding:14px;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:maroon;
-
-    color:white;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-}
-.today-screen{
-    max-width:900px;
-    margin:auto;
-    padding:20px;
-}
-
-.hero-photo img{
-    width:100%;
     border-radius:20px;
-    display:block;
 }
 
 .performance-grid{
@@ -384,33 +255,32 @@ transform:translateY(0);
 }
 
 .stat-card h3{
-    color:#fff;
     margin-bottom:10px;
 }
 
 .stat-card span{
     font-size:2rem;
     font-weight:bold;
-    color:#fff;
 }
 
 .coach-card{
     background:#1b1b1b;
     border-left:6px solid #7A0019;
     border-radius:18px;
-    padding:22px;
+    padding:24px;
     margin-bottom:25px;
 }
 
 .start-btn{
     width:100%;
+    padding:18px;
+    border:none;
+    border-radius:18px;
     background:#7A0019;
     color:white;
-    border:none;
-    border-radius:16px;
-    padding:18px;
     font-size:20px;
     font-weight:bold;
+    cursor:pointer;
 }
 
 .start-btn:hover{
