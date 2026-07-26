@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Elite PG Training</title>
+    <title>Elite PG Training</title>
 
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
 
-<header class="header">
-    <h1>Elite PG Training</h1>
-    <p>Develop Every Skill. Every Day.</p>
-</header>
+    <div id="app"></div>
 
-<div id="app"></div>
+    <nav class="bottom-nav">
+        <button onclick="showPage('dashboard')">
+            🏠<br>
+            Today
+        </button>
 
-<nav class="bottom-nav">
+        <button onclick="showPage('training')">
+            🏀<br>
+            Training
+        </button>
 
-<button onclick="showPage('home')">🏠<br>Home</button>
+        <button onclick="showPage('progress')">
+            📊<br>
+            Progress
+        </button>
 
-<button onclick="showPage('training')">🏀<br>Train</button>
+        <button onclick="showPage('nutrition')">
+            🍎<br>
+            Nutrition
+        </button>
+    </nav>
 
-<button onclick="showPage('progress')">📈<br>Progress</button>
-
-<button onclick="showPage('nutrition')">🍎<br>Nutrition</button>
-
-<button onclick="showPage('recruiting')">🎓<br>Recruit</button>
-
-</nav>
-
-<script src="js/navigation.js"></script>
-<script src="js/app.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 </html>
